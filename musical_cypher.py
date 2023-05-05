@@ -23,12 +23,14 @@ ALPABET_TO_NOTES_MAP = create_mapping()
 NOTES_TO_ALPHABET_MAP = {value: key for key, value in ALPABET_TO_NOTES_MAP.items()}
 
 def decode(args: list[str]):
+    """Decodes a list of words represented as musical notes (mapped from the (latin) alphabetic). Can't handle punctuation."""
     words = []
     for arg in args:
         words.append(''.join(NOTES_TO_ALPHABET_MAP[note] for note in arg.split(INTRA_WORD_SEPERATOR)))
     return ' '.join(words)
 
 def encode(args: list[str]):
+    """Encodes a list of words in the latin alphabet to musical notes (A -> C1, B -> D1, ..., H -> C2, I -> D2, ... Z -> C4). Can't handle punctuation."""
     words = []
 
     for arg in args:
