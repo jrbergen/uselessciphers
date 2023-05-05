@@ -1,5 +1,5 @@
 """
-Very simple 'cypher' mapping the alphabet to musical notes and vice versa.
+Very simple 'cipher' mapping the alphabet to musical notes and vice versa.
 Run in terminal with the sentence to translate as input arguments, with each word separated by a space.
 To 'decode' from musical notes back to alphabetical, a sentence is expected in the same way, with intraword letters seperated by colons (:).
 Can't handle punctuation like commas or periods.
