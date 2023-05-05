@@ -45,7 +45,7 @@ def main():
     if not args:
         print("You need to provide a sentence to [en|decode]...")
         sys.exit(1)
-    if args[0].lower() in ('--reverse', '-r', '-'):
+    if args[0].lower() in ('--reverse', '-r'):
         result = decode(args[1:])
     else:
         result = encode(args)
